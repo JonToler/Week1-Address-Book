@@ -7,7 +7,7 @@
 
     session_start();
     if (empty($_SESSION['contacts'])) {
-        $_SESSION['contacts'] = array();
+    $_SESSION['contacts'] = array();
     }
 
     $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'));
