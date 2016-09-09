@@ -27,7 +27,7 @@
         return $app->redirect('/');
     });
 
-    $app->get('/empty_inventory', function() use ($app){
+    $app->get('/delete_contacts', function() use ($app){
         Contact::clear();
         return $app->redirect('/');
     });

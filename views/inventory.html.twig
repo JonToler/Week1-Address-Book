@@ -1,6 +1,6 @@
 <html>
   <head>
-    <link rel='stylesheet' href='https://maxcontactn.bootstrapcontactn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+    
     <title>Address Book</title>
   </head>
   <body>
@@ -16,13 +16,14 @@
       </form>
       {% if contacts is not empty %}
         {% for contact in contacts %}
-          <h4>{{ contact.getStreetAddress }} Contact {{ contact.getName }}</h4>
+          <h4>{{ contact.getName }}</h4>
+          <h5>Street Address:{{ contact.getStreetAddress }}</h5>
           <p>PhoneNumber: {{ contact.getPhoneNumber }}</p>
           <p>EmailAddress: {{ contact.getEmailAddress }}</p>
         {% endfor %}
       {% endif %}
-      <form action="/empty_inventory">
-        <button type="submit">Empty Inventory</button>
+      <form action="/delete_contacts">
+        <button type="submit">Delete all stored contacts</button>
       </form>
     </div>
   </body>
