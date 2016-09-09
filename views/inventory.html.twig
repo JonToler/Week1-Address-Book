@@ -1,19 +1,24 @@
 <html>
   <head>
-    
+    <link rel='stylesheet' href='https://maxcontactn.bootstrapcontactn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
     <title>Address Book</title>
   </head>
   <body>
       <h1>Address Book</h1>
       <h2>Contacts:</h2>
     <div class="container">
+      <div class="jumbotron">
+
+
       <form method="post" action="/postcontact">
         <input type="text" name="name" placeholder="Enter contacts name">
+        <br><br>
         <input type="text" name="StreetAddress" placeholder="Street Address">
         <input type="text" name="PhoneNumber" placeholder="Phone Number">
         <input type="text" name="EmailAddress" placeholder="email address">
         <input type="submit">Submit new Contact</button>
       </form>
+      </div>
       {% if contacts is not empty %}
         {% for contact in contacts %}
           <h4>{{ contact.getName }}</h4>
