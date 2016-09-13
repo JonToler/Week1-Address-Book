@@ -8,8 +8,11 @@
     function __construct($name = 'unknown', $StreetAddress = 'unknown', $PhoneNumber = 'unknown', $EmailAddress = 'unknown')
     {
       $this->name = $name;
+      
       $this->StreetAddress = $StreetAddress;
+      
       $this->PhoneNumber = $PhoneNumber;
+      
       $this->EmailAddress = $EmailAddress;
     }
     function getname()
